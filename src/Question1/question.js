@@ -9,8 +9,8 @@ const DATA = function() {
     return stringArray.join("\n");
   }
 
-  function load(a) {
-    const stringArray = a.split("\n").filter(item => item.length);
+  function load(text) {
+    const stringArray = text.split("\n").filter(x => x.length);
     const mapArray = stringArray.map(item => {
       const obj = {};
       const keyValueArray = item.split(";").map(it => {
@@ -27,4 +27,5 @@ const DATA = function() {
     load
   };
 };
+
 module.exports = DATA;
