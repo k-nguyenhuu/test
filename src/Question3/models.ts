@@ -10,7 +10,8 @@ export interface IProduct {
   price: number
 };
 export enum discountOption {
-  Employee = 30,
-  Affiliate = 10,
-  Over2years = 5
+  Employee   = 30,
+  Affiliate  = 10,
+  Over2years = 5,
+  NotInRange = 0
 };

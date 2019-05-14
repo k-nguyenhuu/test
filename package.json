@@ -6,7 +6,8 @@
   "scripts": {
     "q1": "node src/question1/question",
     "q3": "tsc && node dist/main",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",

@@ -7,7 +7,7 @@ import {
 import {
   MOCK_PRODUCTS,
   MOCK_USER,
-  MOCK_OPTION
+  MOCK_OPTION_EMPLOYEE
 } from "./data.mock";
 
 export class Checkout {
@@ -26,14 +26,13 @@ export class Checkout {
     return products.map(x => x.price).reduce((sum, item) => sum + item, 0);
   }
 
-  discountOnCashSum(priceSum: number){
+  discountOnCashSum(priceSum: number): number {
     const cashDiscount = Math.floor(priceSum/100)*5;
     return priceSum - cashDiscount;
   }
 
-  discountPercent(product: IProduct) {
+  discountPercent(product: IProduct): number {
     if (product.type == "groceries") return 0;
-
     switch (this.option) {
       case discountOption.Employee: {
         if (this.user.isEmployee) return discountOption.Employee;
@@ -44,8 +43,8 @@ export class Checkout {
       case discountOption.Over2years: {
         if (this.user.membershipFrom > 2) return discountOption.Over2years;
       }
+      default: { return discountOption.NotInRange; }
     }
-    return 0;
   }
 
   netPrice(): any {
@@ -60,5 +59,5 @@ export class Checkout {
   }
 }
 
-const cc = new Checkout(MOCK_USER, MOCK_PRODUCTS, MOCK_OPTION);
+const cc = new Checkout(MOCK_USER, MOCK_PRODUCTS, MOCK_OPTION_EMPLOYEE);
 console.log("net price", cc.netPrice());
