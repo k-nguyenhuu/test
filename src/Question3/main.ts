@@ -58,6 +58,3 @@ export class Checkout {
     return nestPrice;
   }
 }
-
-const cc = new Checkout(MOCK_USER, MOCK_PRODUCTS, MOCK_OPTION_EMPLOYEE);
-console.log("net price", cc.netPrice());

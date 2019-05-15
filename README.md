@@ -16,10 +16,10 @@ This code base on ES6
 ####Load function (input: string, output: array):
  * Split string to an array
  * Map loop over each item, convert each item to object
- ### Time Complexity
-* Time Complexity for `store` function: 0(n)
+ ### Complexity
+* Complexity for `store` function: 0(n)
 
-* Time Complexity for `load` function: 0(n*m)
+* Complexity for `load` function: 0(n*m)
 
 ##QUESTION 3:
 This code is written in TYPESCRIPT, 
