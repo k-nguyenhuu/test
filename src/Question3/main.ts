@@ -4,12 +4,6 @@ import {
   discountOption,
 } from "./models";
 
-import {
-  MOCK_PRODUCTS,
-  MOCK_USER,
-  MOCK_OPTION_EMPLOYEE
-} from "./data.mock";
-
 export class Checkout {
   //field
   user: IUser;
